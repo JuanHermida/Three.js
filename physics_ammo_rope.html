@@ -260,10 +260,11 @@
 				ropeGeometry.setIndex(new THREE.BufferAttribute(new Uint16Array(ropeIndices), 1));
 				ropeGeometry.setAttribute('position', new THREE.BufferAttribute(new Float32Array(ropePositions), 3));
 				ropeGeometry.computeBoundingSphere();
+				//geometria 
 				rope = new THREE.LineSegments(ropeGeometry, ropeMaterial);
-				rope.castShadow = true;
+				rope.castShadow = true; //sombras 
 				rope.receiveShadow = true;
-				//scene.add(rope);
+				scene.add(rope);
 
 				// Rope physic object
 				const softBodyHelpers = new Ammo.btSoftBodyHelpers();
