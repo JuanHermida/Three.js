@@ -233,13 +233,13 @@
 
 				// The rope
 				// Rope graphic object
-				const ropeNumSegments = 10;
-				const ropeLength = 4;
-				const ropeMass = 3;
-				const ropePos = ball.position.clone();
+				const ropeNumSegments = 10; //numero de segmentos de la cuerda 
+				const ropeLength = 4; //distancia de la cuerda 
+				const ropeMass = 3; //masa de la cuerda 
+				const ropePos = ball.position.clone(); //posicion de la cuerda 
 				ropePos.y += ballRadius;
 
-				const segmentLength = ropeLength / ropeNumSegments;
+				const segmentLength = ropeLength / ropeNumSegments; //longitud de segmento 
 				const ropeGeometry = new THREE.BufferGeometry();
 				const ropeMaterial = new THREE.LineBasicMaterial({ color: 0x000000 });
 				const ropePositions = [];
@@ -263,7 +263,7 @@
 				rope = new THREE.LineSegments(ropeGeometry, ropeMaterial);
 				rope.castShadow = true;
 				rope.receiveShadow = true;
-				scene.add(rope);
+				//scene.add(rope);
 
 				// Rope physic object
 				const softBodyHelpers = new Ammo.btSoftBodyHelpers();
